@@ -6,6 +6,13 @@ I like building under real constraints: no admin rights, no paid service, strict
 
 ### Featured projects
 
+**[Madoguchi 窓口](https://github.com/thibaultbordrie-cloud/madoguchi)**: a read-only MCP server in TypeScript that gives AI agents governed access to Tsunagu, Koyomi and Kensa (below), and a benchmark that scores the agents.
+
+- The agent sees a governed copy: no answer key, no names, pseudonymised identifiers, one SELECT at a time, no file or network access, every call logged
+- `madoguchi check` tries 23 ways around these locks on every push; all 23 must fail
+- A holdout tool that shows what e-mail really caused next to what last-click claims (755 orders credited, 488 truly caused)
+- 27 questions answered from sources independent of the server; a tools-only oracle must score 27/27 in CI, then any local model can be measured
+
 **[Tsunagu つなぐ](https://github.com/thibaultbordrie-cloud/tsunagu)**: a fictional cross-border CRM world (France, Japan, Taiwan) with its answer key.
 
 - E-mail (Brevo-like), LINE Official Account (Messaging API-like) and shop orders (Shopify-like), in DuckDB and as API-shaped JSON
@@ -40,6 +47,8 @@ I like building under real constraints: no admin rights, no paid service, strict
 ![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)
 ![Rust](https://img.shields.io/badge/Rust-B7410E?logo=rust&logoColor=white)
 ![Go](https://img.shields.io/badge/Go-00ADD8?logo=go&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)
+![MCP](https://img.shields.io/badge/MCP-000000)
 ![SQL](https://img.shields.io/badge/SQL-4479A1?logo=postgresql&logoColor=white)
 ![DuckDB](https://img.shields.io/badge/DuckDB-FFF000?logo=duckdb&logoColor=black)
 ![dbt](https://img.shields.io/badge/dbt-FF694B?logo=dbt&logoColor=white)
@@ -58,10 +67,11 @@ I like building under real constraints: no admin rights, no paid service, strict
 - **No secret in plain text, no customer data in Git**: checked by tests, not by memory.
 - **Measure before claiming**: my question assistant was scored on paraphrases written *after* its rules (18/20 at the first run), not only on its own examples.
 - **Test against a known truth**: Tsunagu and Kensa ship with answer keys, and Koyomi is checked against independent references, so an analysis, a tool or an AI agent can be scored, not just demoed.
+- **Give agents the least they need**: Madoguchi's locks are tested by trying to break them, not by trusting the agent.
 
 ### Currently learning
 
-Statistics for marketing (is a gap real or noise?), building and evaluating agents with Claude, data quality contracts, local language models, Rust, Go, and Salesforce (Trailhead).
+Statistics for marketing (is a gap real or noise?), building and evaluating agents with Claude, data quality contracts, local language models, Rust, Go, TypeScript and the Model Context Protocol, and Salesforce (Trailhead).
 
 ### Background
 
@@ -71,4 +81,4 @@ Master's degree in digital marketing, then several years in CRM: campaign planni
 
 ---
 
-<sub>En bref (FR) : je viens du CRM et de l'emailing, et je me forme au métier de data engineer en construisant de vrais outils : ingestion d'API, entrepôt DuckDB, dbt, Dagster, alertes, BigQuery, et des outils en Rust et en Go. Je vise aussi les marchés japonais, taïwanais et coréen. Les projets publics ne contiennent que des données fictives.</sub>
+<sub>En bref (FR) : je viens du CRM et de l'emailing, et je me forme au métier de data engineer en construisant de vrais outils : ingestion d'API, entrepôt DuckDB, dbt, Dagster, alertes, BigQuery, et des outils en Rust, en Go et en TypeScript, dont un serveur MCP qui donne à des agents IA un accès encadré aux données. Je vise aussi les marchés japonais, taïwanais et coréen. Les projets publics ne contiennent que des données fictives.</sub>

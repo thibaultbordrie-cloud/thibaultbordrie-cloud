@@ -13,6 +13,14 @@ I like building under real constraints: no admin rights, no paid service, strict
 - A holdout tool that shows what e-mail really caused next to what last-click claims (755 orders credited, 488 truly caused)
 - 27 questions answered from sources independent of the server; a tools-only oracle must score 27/27 in CI, then any local model can be measured
 
+**[Yoyū 余裕](https://github.com/thibaultbordrie-cloud/yoyu)**: a calm, local-first web app for autistic adults and people living with anxiety, in TypeScript with no runtime dependency. [Try it](https://thibaultbordrie-cloud.github.io/yoyu/).
+
+- Three tools: an evening energy log, cards to prepare costly situations (a phone call, an appointment, a trip), and a daily worry time
+- Nothing leaves the device: no account, no server, no analytics; a browser test fails if any request goes out
+- Encrypted backups (AES-256-GCM), works offline, installable as a PWA, in French, English, Japanese and Traditional Chinese
+- Patterns only after 14 days, with a permutation test corrected for the number of tags; on pure noise, at most 3 in 60 logs show one
+- axe-core finds no WCAG 2.1 A/AA rule violation on any page, in two languages and two themes; no wording promises care, checked in all four languages
+
 **[Tsunagu つなぐ](https://github.com/thibaultbordrie-cloud/tsunagu)**: a fictional cross-border CRM world (France, Japan, Taiwan) with its answer key.
 
 - E-mail (Brevo-like), LINE Official Account (Messaging API-like) and shop orders (Shopify-like), in DuckDB and as API-shaped JSON
@@ -49,6 +57,8 @@ I like building under real constraints: no admin rights, no paid service, strict
 ![Go](https://img.shields.io/badge/Go-00ADD8?logo=go&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)
 ![MCP](https://img.shields.io/badge/MCP-000000)
+![Playwright](https://img.shields.io/badge/Playwright-2EAD33?logo=playwright&logoColor=white)
+![PWA](https://img.shields.io/badge/PWA-5A0FC8?logo=pwa&logoColor=white)
 ![SQL](https://img.shields.io/badge/SQL-4479A1?logo=postgresql&logoColor=white)
 ![DuckDB](https://img.shields.io/badge/DuckDB-FFF000?logo=duckdb&logoColor=black)
 ![dbt](https://img.shields.io/badge/dbt-FF694B?logo=dbt&logoColor=white)
@@ -68,6 +78,7 @@ I like building under real constraints: no admin rights, no paid service, strict
 - **Measure before claiming**: my question assistant was scored on paraphrases written *after* its rules (18/20 at the first run), not only on its own examples.
 - **Test against a known truth**: Tsunagu and Kensa ship with answer keys, and Koyomi is checked against independent references, so an analysis, a tool or an AI agent can be scored, not just demoed.
 - **Give agents the least they need**: Madoguchi's locks are tested by trying to break them, not by trusting the agent.
+- **Private and accessible by default**: Yoyū keeps everything on the device and is checked for accessibility on every push.
 
 ### Currently learning
 
@@ -81,4 +92,4 @@ Master's degree in digital marketing, then several years in CRM: campaign planni
 
 ---
 
-<sub>En bref (FR) : je viens du CRM et de l'emailing, et je me forme au métier de data engineer en construisant de vrais outils : ingestion d'API, entrepôt DuckDB, dbt, Dagster, alertes, BigQuery, et des outils en Rust, en Go et en TypeScript, dont un serveur MCP qui donne à des agents IA un accès encadré aux données. Je vise aussi les marchés japonais, taïwanais et coréen. Les projets publics ne contiennent que des données fictives.</sub>
+<sub>En bref (FR) : je viens du CRM et de l'emailing, et je me forme au métier de data engineer en construisant de vrais outils : ingestion d'API, entrepôt DuckDB, dbt, Dagster, alertes, BigQuery, et des outils en Rust, en Go et en TypeScript, dont un serveur MCP qui donne à des agents IA un accès encadré aux données. J'ai également publié Yoyū, une application web calme et locale pour les adultes autistes et les personnes anxieuses (rien ne quitte l'appareil). Je vise aussi les marchés japonais, taïwanais et coréen. Les projets publics ne contiennent que des données fictives.</sub>

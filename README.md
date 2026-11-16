@@ -11,13 +11,21 @@ I like building under real constraints: no admin rights, no paid service, strict
 - E-mail (Brevo-like), LINE Official Account (Messaging API-like) and shop orders (Shopify-like), in DuckDB and as API-shaped JSON
 - Local calendars and prices: 初売り, お中元, 雙11, 年貨 before 春節, soldes; ¥2,980, NT$590
 - Holdout groups with a true causal effect: last-click credits campaigns with 10 to 21 % of orders, and fewer than half of those were really caused
-- Data contract, 35 tests, CI on Python 3.11 to 3.13
+- Exports to Salesforce import files (Contact, Campaign, CampaignMember, Product2), built while learning on Trailhead
+- Data contract, 42 tests, CI on Python 3.11 to 3.13
 
 **[Kensa 検査](https://github.com/thibaultbordrie-cloud/kensa)**: an SEO auditor in Rust for French, Japanese and Chinese sites, and for AI search.
 
 - 38 rules: hreflang, CJK title width, zh-Hant vs zh-Hans, forgotten translations, AI search crawlers vs training crawlers, llms.txt, JSON-LD
 - A trap site with 25 planted defects and an answer key: F1 = 1.00 on 100 seeds
 - One binary for Windows, macOS and Linux, CI on all three
+
+**[Koyomi 暦](https://github.com/thibaultbordrie-cloud/koyomi)**: the commercial calendar of Japan, Taiwan, South Korea and France, computed from astronomy in Go.
+
+- New moons and solar terms computed from Meeus, then the lunisolar calendar on each country's clock: Lunar New Year is February 6, 2027 in Taipei and February 7 in Seoul
+- 春節, 中秋節, 尾牙, 설날, 추석, 節分, 土用の丑の日, 三伏, soldes, fête des mères: 73 events a year
+- Checked against PyEphem and published tables: 2,312 lunar months and 459 holiday dates
+- Published by CI as [calendar feeds](https://thibaultbordrie-cloud.github.io/koyomi/) you can subscribe to, plus JSON and CSV; no dependency
 
 **[Brevo Campaign Warehouse](https://github.com/thibaultbordrie-cloud/brevo-campaign-warehouse)**: an end-to-end pipeline for email marketing data.
 
@@ -31,6 +39,7 @@ I like building under real constraints: no admin rights, no paid service, strict
 
 ![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)
 ![Rust](https://img.shields.io/badge/Rust-B7410E?logo=rust&logoColor=white)
+![Go](https://img.shields.io/badge/Go-00ADD8?logo=go&logoColor=white)
 ![SQL](https://img.shields.io/badge/SQL-4479A1?logo=postgresql&logoColor=white)
 ![DuckDB](https://img.shields.io/badge/DuckDB-FFF000?logo=duckdb&logoColor=black)
 ![dbt](https://img.shields.io/badge/dbt-FF694B?logo=dbt&logoColor=white)
@@ -48,11 +57,11 @@ I like building under real constraints: no admin rights, no paid service, strict
 - **Fail loudly**: a pipeline that stops with a clear alert beats one that loads half the data.
 - **No secret in plain text, no customer data in Git**: checked by tests, not by memory.
 - **Measure before claiming**: my question assistant was scored on paraphrases written *after* its rules (18/20 at the first run), not only on its own examples.
-- **Test against a known truth**: Tsunagu and Kensa ship with answer keys, so an analysis, a tool or an AI agent can be scored, not just demoed.
+- **Test against a known truth**: Tsunagu and Kensa ship with answer keys, and Koyomi is checked against independent references, so an analysis, a tool or an AI agent can be scored, not just demoed.
 
 ### Currently learning
 
-Statistics for marketing (is a gap real or noise?), building and evaluating agents with Claude, data quality contracts, local language models, Rust, and Salesforce (Trailhead).
+Statistics for marketing (is a gap real or noise?), building and evaluating agents with Claude, data quality contracts, local language models, Rust, Go, and Salesforce (Trailhead).
 
 ### Background
 
@@ -62,4 +71,4 @@ Master's degree in digital marketing, then several years in CRM: campaign planni
 
 ---
 
-<sub>En bref (FR) : je viens du CRM et de l'emailing, et je me forme au métier de data engineer en construisant de vrais outils : ingestion d'API, entrepôt DuckDB, dbt, Dagster, alertes, BigQuery, et des outils en Rust. Je vise aussi les marchés japonais et taïwanais. Les projets publics ne contiennent que des données fictives.</sub>
+<sub>En bref (FR) : je viens du CRM et de l'emailing, et je me forme au métier de data engineer en construisant de vrais outils : ingestion d'API, entrepôt DuckDB, dbt, Dagster, alertes, BigQuery, et des outils en Rust et en Go. Je vise aussi les marchés japonais, taïwanais et coréen. Les projets publics ne contiennent que des données fictives.</sub>

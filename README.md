@@ -28,7 +28,14 @@ I like building under real constraints: no admin rights, no paid service, strict
 - Customer orders set aside oldest first, purchase orders, returns within each supplier's window, stock counts with a barcode scanner; customers' names stay out of the journal and can be erased
 - Money in integers, tax-inclusive prices rounded once per rate, as Japan's invoice rules ask
 - Every sale goes to an append-only, hash-chained journal; `shiori verify` detects any edited line
-- Web interface in French, English, Japanese and Traditional Chinese, with no JavaScript, a strict CSP, CSRF tokens and a PBKDF2 passphrase; 41 tests on Windows, macOS and Linux
+- Web interface in French, English, Japanese and Traditional Chinese, with no JavaScript, a strict CSP, CSRF tokens and a PBKDF2 passphrase; 52 tests on Windows, macOS and Linux
+
+**[Hashi 橋](https://github.com/thibaultbordrie-cloud/hashi)**: every translation of a book, from the open catalogues, in Kotlin with no dependency.
+
+- From an ISBN or a title in any language: the work in Wikidata (SPARQL) and Open Library, then every edition in Open Library, Wikidata and the National Diet Library of Japan (JSON and XML)
+- Editions merged by ISBN and filed by language; Chinese split by ISBN area: Taiwan and Hong Kong to 繁體, mainland China to 简体
+- Translators read from title pages in nine languages; a language Hashi had to infer is marked, and every edition names its catalogues
+- Tested offline on six books (Norwegian Wood, The Vegetarian, The Three-Body Problem…) against recorded catalogue answers; polite to the catalogues: one request at a time, cached, nothing sent but the query
 
 **[Tsunagu つなぐ](https://github.com/thibaultbordrie-cloud/tsunagu)**: a fictional cross-border CRM world (France, Japan, Taiwan) with its answer key.
 
@@ -70,6 +77,7 @@ I like building under real constraints: no admin rights, no paid service, strict
 ![Playwright](https://img.shields.io/badge/Playwright-2EAD33?logo=playwright&logoColor=white)
 ![PWA](https://img.shields.io/badge/PWA-5A0FC8?logo=pwa&logoColor=white)
 ![SQL](https://img.shields.io/badge/SQL-4479A1?logo=postgresql&logoColor=white)
+![SPARQL](https://img.shields.io/badge/SPARQL-006699?logo=wikidata&logoColor=white)
 ![DuckDB](https://img.shields.io/badge/DuckDB-FFF000?logo=duckdb&logoColor=black)
 ![dbt](https://img.shields.io/badge/dbt-FF694B?logo=dbt&logoColor=white)
 ![Dagster](https://img.shields.io/badge/Dagster-4F43DD)
@@ -89,6 +97,7 @@ I like building under real constraints: no admin rights, no paid service, strict
 - **Test against a known truth**: Tsunagu and Kensa ship with answer keys, and Koyomi is checked against independent references, so an analysis, a tool or an AI agent can be scored, not just demoed.
 - **Give agents the least they need**: Madoguchi's locks are tested by trying to break them, not by trusting the agent.
 - **Laws are rules with sources**: Shiori encodes the book-price rules of four countries, cites each one and tests it.
+- **Show the source**: Hashi names the catalogues behind every edition and marks what it inferred, so a bookseller can check.
 - **Private and accessible by default**: Yoyū keeps everything on the device and is checked for accessibility on every push.
 
 ### Currently learning
@@ -103,4 +112,4 @@ Master's degree in digital marketing, then several years in CRM: campaign planni
 
 ---
 
-<sub>En bref (FR) : je viens du CRM et de l'emailing, et je me forme au métier de data engineer en construisant de vrais outils : ingestion d'API, entrepôt DuckDB, dbt, Dagster, alertes, BigQuery, et des outils en Rust, en Go et en TypeScript, dont un serveur MCP qui donne à des agents IA un accès encadré aux données. J'ai également publié Yoyū, une application web calme et locale pour les adultes autistes et les personnes anxieuses (rien ne quitte l'appareil), et Shiori, un logiciel libre de caisse et de stock pour les librairies indépendantes qui applique la loi Lang et ses équivalents au Japon, à Taïwan et en Corée. Je vise aussi les marchés japonais, taïwanais et coréen. Les projets publics ne contiennent que des données fictives.</sub>
+<sub>En bref (FR) : je viens du CRM et de l'emailing, et je me forme au métier de data engineer en construisant de vrais outils : ingestion d'API, entrepôt DuckDB, dbt, Dagster, alertes, BigQuery, et des outils en Rust, en Go et en TypeScript, dont un serveur MCP qui donne à des agents IA un accès encadré aux données. J'ai également publié Yoyū, une application web calme et locale pour les adultes autistes et les personnes anxieuses (rien ne quitte l'appareil), et Shiori, un logiciel libre de caisse et de stock pour les librairies indépendantes qui applique la loi Lang et ses équivalents au Japon, à Taïwan et en Corée, et Hashi, qui retrouve toutes les traductions d'un livre (français, anglais, japonais, coréen, chinois traditionnel et simplifié) dans les catalogues ouverts. Je vise aussi les marchés japonais, taïwanais et coréen. Les projets publics ne contiennent que des données fictives.</sub>

@@ -25,6 +25,7 @@ I like building under real constraints: no admin rights, no paid service, strict
 
 - Catalogue, stock, till and reports in one jar: ISBN checks, titles in five languages, optional Open Library lookup
 - The book-price laws of four markets as tested rules: France's 5 % cap (loi Lang), Japan's fixed prices and qualified-invoice receipts, Taiwan, and Korea's 10 % discount and 15 % total benefit
+- Customer orders set aside oldest first, purchase orders, returns within each supplier's window, stock counts with a barcode scanner; customers' names stay out of the journal and can be erased
 - Money in integers, tax-inclusive prices rounded once per rate, as Japan's invoice rules ask
 - Every sale goes to an append-only, hash-chained journal; `shiori verify` detects any edited line
 - Web interface in French, English, Japanese and Traditional Chinese, with no JavaScript, a strict CSP, CSRF tokens and a PBKDF2 passphrase; 41 tests on Windows, macOS and Linux
